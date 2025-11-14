@@ -29,15 +29,24 @@ nav ul li{
 header{
 
 }
-/*imagenes*/
 
+body .parrafo{
+    background-color: pink
+
+    margin: 1rem;
+    padding: 1rem;
+
+
+}
+/*imagenes*/
 body header .imagenes img{
-    width: 40%;
+    width: 25%;
     height: 10%;
    }
 
    body header .imagenes{
     display: flex;
+    flex-direction: column;
     justify-content: center;
    }
 
@@ -46,14 +55,16 @@ body header .imagenes img{
     height: 100px;
 }
  body main .productos .imagen{
-    width: 200px;
-    height: 150px;
-    margin: 20px;
+    width: 10%;
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 15%;
 }
 body main .productos{
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     object-fit: cover;
     
@@ -70,6 +81,13 @@ body{
     padding: 1rem;
     margin: auto;
     border: auto;
+}
+body #imagenes{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+
 }
 
 
