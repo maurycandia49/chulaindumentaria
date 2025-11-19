@@ -1,0 +1,117 @@
+//variables
+@use "../utilities/variables"as *;
+
+//mixin
+@use "../utilities/mixin" as *;
+
+body {
+  font-family: "Merriweather", serif;
+  background-color: white;
+  text-align: center;
+}
+
+header {
+  @include flexbox(row, space-between, center);
+  padding: 1rem;
+
+  .logo {
+    a {
+      img {
+        @include img-size(80px);
+      }
+    }
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #dc3545;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+  /* Sidebar / Offcanvas */
+.offcanvas-body {
+  ul.nav {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a.nav-link {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
+/* Botones Filtrar / Buscar*/
+.btn {
+  --bs-btn-padding-y: 0.25rem;
+  --bs-btn-padding-x: 0.5rem;
+  --bs-btn-font-size: 0.75rem;
+}
+
+/* Contenedor */
+.contenedor {
+  padding: 1rem;
+  @include flexbox(column, center, center);
+
+  main.productos {
+    @include flexbox(row, space-around, flex-start);
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .producto {
+      background-color: pink;
+      padding: 1rem;
+      @include rounded(15px);
+      width: 200px; /* ancho fijo para cada producto */
+
+      a img {
+        @include img-size(100%);
+        height: auto;
+        @include rounded(10px);
+      }
+
+      .parrafo {
+        text-align: center;
+        font-size: 1rem;
+        p {
+          margin: 0.25rem 0;
+
+          span {
+            text-decoration-line: line-through;
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* media queries */
+@media (min-width: 768px) {
+  header .logo a img {
+    @include img-size(120px);
+  }
+
+  .contenedor main.productos {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .logo a img {
+    @include img-size(150px);
+  }
+
+  .contenedor main.productos {
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+}

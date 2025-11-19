@@ -1,0 +1,18 @@
+// Mixin
+//flexbox
+@mixin flexbox($direccion, $justificacion, $alineacion) {
+  display: flex;
+  flex-direction: $direccion;
+  justify-content: $justificacion;
+  align-items: $alineacion;
+}
+/* Tamaño de imagen */
+@mixin img-size($width, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+/* Border radius */
+@mixin rounded($radius: 10px) {
+  border-radius: $radius;
+}

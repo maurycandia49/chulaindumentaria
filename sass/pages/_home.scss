@@ -1,0 +1,137 @@
+//variables
+@use "../utilities/variables"as *;
+
+//mixin
+@use "../utilities/mixin" as *;
+
+// Barra de navegación
+
+/* variables */
+$color-primary: #dc3545;
+$color-light: pink;
+$font-main: "Merriweather", serif;
+
+/* body */
+body {
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    font-family: $font-main;
+}
+
+h2 {
+    text-align: center;
+}
+
+.parrafo {
+    background-color: $color-light;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+/* header */
+header {
+    align-items: center;
+    padding-left: 1rem;
+
+    .navbar {
+        background-color: $color-primary;
+        padding: 1rem;
+        align-items: center;
+
+        .logo {
+            align-items: center;
+            justify-content: center;
+
+            a {
+                height: 10%;
+
+                img {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+/* carousel */
+.carousel-inner {
+    background-color: $color-light;
+    padding: 1rem;
+}
+
+.carousel-item {
+    width: 80%;
+    align-items: center;
+
+    img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        padding-left: 3rem;
+    }
+}
+
+/* footer */
+.footer {
+    background-color: $color-primary;
+    padding: 1rem;
+    margin: auto;
+}
+
+/* media  queris */
+@media (min-width: 1024px) {
+    header {
+        .navbar {
+            background-color: $color-primary;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            padding: 1rem;
+            gap: 10rem;
+
+            .logo a img {
+                width: 20%;
+                height: auto;
+            }
+        }
+    }
+
+    #carouselExampleAutoplaying {
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        .navbar {
+            background-color: $color-primary;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            padding: 1rem;
+            gap: 10rem;
+
+            .logo a img {
+                width: 20%;
+                height: auto;
+            }
+        }
+    }
+
+    #carouselExampleAutoplaying {
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
